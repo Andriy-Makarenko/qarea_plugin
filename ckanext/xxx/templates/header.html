@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+
+{% block header_site_navigation_tabs %}
+	 {{ super() }}		
+
+
+	 {% if h.check_access('sysadmin') %}
+
+		{{ h.build_nav_main(			
+			('users.users_datasets', _('Users Datasets')),
+		) }}
+
+		{% endif %}	
+
+
+{% endblock %}

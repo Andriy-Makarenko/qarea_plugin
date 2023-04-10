@@ -1,0 +1,19 @@
+{% extends 'home/about.html' %}
+
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Users Datasets'), 'users.users_datasets' %}</li>
+{% endblock %}
+
+
+{% block primary %}
+	{{ request }}
+{% endblock %}
+
+
+<!-- {% block header_site_navigation_tabs %}
+	{{ super() }}						
+	{{ h.build_nav_main(			
+			('home.index', _('User Dataset')),
+	) }}
+{% endblock %} -->
